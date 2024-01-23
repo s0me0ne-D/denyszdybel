@@ -1,0 +1,14 @@
+@import "../../global_styles/colors.scss";
+.title {
+	width: 100%;
+	height: 100svh;
+	display: grid;
+	place-content: center;
+	color: $TEXT;
+	font-size: max(25px, min(5vw, 5rem));
+	&_description {
+		width: 100%;
+		text-align: end;
+		font-size: max(15px, min(3vw, 3rem));
+	}
+}

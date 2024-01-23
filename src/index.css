@@ -1,3 +1,5 @@
-body {
-	overflow: hidden;
+@import "./global_styles/_reset.scss";
+@font-face {
+	font-family: "Inter";
+	src: url("./assets/fonts/Inter/Inter-VariableFont.ttf") format("truetype");
 }
