@@ -1,21 +1,24 @@
-@import "../../../global_styles/colors.scss";
+@import "../../../global_styles/colors.scss", "../../../global_styles/animations";
+
 .name {
 	font-weight: 900;
 	font-size: max(50px, min(7vw, 10rem));
 }
-
 .letters {
 	cursor: default;
 	position: relative;
+
 	&_transform {
+		opacity: 1;
 		position: relative;
 		display: inline-block;
-		transition: 0.1s ease-in;
+		transition: 0.2s ease-in;
 		&.reverse {
 			transform: rotate(10deg);
 		}
 	}
 	&_background {
+		opacity: 1;
 		height: 100%;
 		display: grid;
 		place-content: center;
@@ -23,6 +26,7 @@
 		top: 0;
 		left: 0;
 		color: $BLUE;
+		transition: 0.2s ease-in;
 		&.reverse {
 			text-shadow: 0 0 10px #65aaea, 0 0 40px $BLUE, 0 0 80px $BLUE, 0 0 90px $BLUE;
 		}
@@ -30,7 +34,7 @@
 	&:hover {
 		.letters {
 			&_transform {
-				transform: rotate(10deg) scale(1.07);
+				transform: rotate(10deg);
 				&.reverse {
 					transform: rotate(0);
 				}
@@ -43,6 +47,17 @@
 			}
 		}
 	}
+}
+$letterQuantity: 11;
+
+@for $i from 1 through $letterQuantity {
+	$animationDelay: #{0.5 + 0.05 * $i}s;
+	.appears-scale-#{$i} {
+		animation: 1s appears-scale $animationDelay both;
+	}
+}
+.stop-animation {
+	animation: none;
 }
 
 @media (max-width: 430px) {

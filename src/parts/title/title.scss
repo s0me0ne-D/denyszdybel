@@ -1,4 +1,4 @@
-@import "../../global_styles/colors.scss";
+@import "../../global_styles/colors.scss", "../../global_styles/animations";
 .title {
 	width: 100%;
 	height: 100svh;
@@ -11,4 +11,8 @@
 		text-align: end;
 		font-size: max(15px, min(3vw, 3rem));
 	}
+}
+.appears-down-1 {
+	display: inline-block;
+	animation: appears-down 1s;
 }

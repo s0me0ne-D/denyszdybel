@@ -1,5 +1,7 @@
-@import "../../../global_styles/colors.scss";
+@import "../../../global_styles/colors.scss", "../../../global_styles/animations";
 .code-background {
+	opacity: 0;
+	animation: 2s appears 0.1s forwards;
 	width: fit-content;
 	position: absolute;
 	z-index: -1;
