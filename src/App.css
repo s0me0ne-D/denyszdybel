@@ -1,8 +1,8 @@
 body {
-	overflow: hidden;
 	font-family: "Inter";
 	background-color: #0e100f;
 	padding: 0 100px;
+	scroll-behavior: smooth;
 }
 
 @media (max-width: 600px) {

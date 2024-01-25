@@ -1,0 +1,11 @@
+@import "../../global_styles/colors";
+
+.navBar {
+	height: 100svh;
+	width: 90px;
+	position: absolute;
+	top: 0;
+	left: 10px;
+	color: $TEXT;
+	border-right: 1px solid $TEXT;
+}
