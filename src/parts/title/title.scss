@@ -4,7 +4,7 @@
 	height: 100svh;
 	display: grid;
 	place-content: center;
-	color: $TEXT;
+	color: $JUST_WHITE;
 	font-size: max(25px, min(5vw, 5rem));
 	&_description {
 		width: 100%;
@@ -15,4 +15,9 @@
 .appears-down-1 {
 	display: inline-block;
 	animation: appears-down 1s;
+}
+@media (max-width: 600px) {
+	.title {
+		padding: 0 20px;
+	}
 }

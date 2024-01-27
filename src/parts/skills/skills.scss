@@ -1,0 +1,173 @@
+@import "../../global_styles/colors", "../../global_styles/animations";
+.skills {
+	display: grid;
+	grid-template-columns: 1fr 3fr;
+	grid-template-rows: auto 1fr;
+	gap: 20px;
+	color: #ffffff;
+	&_title {
+		width: 100%;
+		display: flex;
+		justify-content: flex-end;
+		padding: 100px 0 20px;
+		font-family: "Heebo";
+		font-size: max(25px, min(2vw, 3rem));
+		font-weight: 900;
+		span {
+			text-align: end;
+			width: 50%;
+		}
+	}
+	&_names {
+		grid-row: 2;
+		grid-column: 1;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+	}
+	&_btn {
+		color: #ffffff;
+		width: 50%;
+		height: 50%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		position: relative;
+		&::before {
+			content: "";
+			width: 1%;
+			height: 100%;
+			position: absolute;
+			z-index: -1;
+			top: 0;
+			left: 100%;
+			display: inline-block;
+			background-color: #ffffff;
+			transition: 0.2s ease-in;
+		}
+		button {
+			width: 100%;
+			height: 100%;
+			font-family: "Heebo";
+			color: #ffffff;
+			background: transparent;
+		}
+	}
+	.active {
+		&::before {
+			box-shadow: -5px 0 80px 5px $BLUE, -10px 0 80px 5px $BLUE, -20px 0 100px 5px $BLUE,
+				-40px 0 130px 5px $BLUE, -50px 0 150px 5px $BLUE, -100px 0 180px 5px $BLUE,
+				-150px 0 200px 5px $BLUE;
+		}
+	}
+	&_hard {
+		min-height: 350px;
+		max-width: 80%;
+		font-family: "IBM 200";
+		grid-column: 2;
+		grid-row: 2;
+		display: grid;
+		gap: 10px;
+		grid-template-columns: repeat(2, 1fr);
+		place-items: center;
+		li {
+			width: fit-content;
+			height: fit-content;
+			padding: 5px 15px;
+			background-color: rgba(135, 135, 135, 0.287);
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			gap: 3px;
+		}
+		svg {
+			max-width: 20px;
+			max-height: 20px;
+		}
+	}
+	&_soft {
+		max-width: 80%;
+		min-height: 350px;
+		font-family: "IBM 200";
+		grid-column: 2;
+		grid-row: 2;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		gap: 10px;
+		tbody {
+			width: fit-content;
+			padding: 5px 15px;
+			background-color: rgba(135, 135, 135, 0.287);
+			border-radius: 10px;
+		}
+		&_title {
+			font-family: "IBM 600";
+			display: flex;
+			justify-content: start;
+			text-wrap: nowrap;
+		}
+	}
+}
+
+$skillsQuantity: 12;
+
+@for $i from 1 through $skillsQuantity {
+	$animationDelay: #{0.1 + 0.05 * $i}s;
+	.appears-scale-skills-#{$i} {
+		animation: 0.2s appears-scale $animationDelay both;
+	}
+}
+
+@media (max-width: 600px) {
+	.skills {
+		display: flex;
+		flex-direction: column;
+		padding: 50px 30px;
+		&_title {
+			padding: 0;
+			justify-content: flex-start;
+			span {
+				text-align: left;
+			}
+		}
+		&_names {
+			flex-direction: row;
+		}
+		&_btn {
+			button {
+				height: 60px;
+			}
+			&::before {
+				width: 100%;
+				height: 1px;
+				top: 100%;
+				left: 0;
+			}
+			&:hover {
+				&:before {
+					box-shadow: 0px -5px 80px 5px $BLUE, 0px -10px 80px 5px $BLUE, 0 -20px 100px 5px $BLUE,
+						0px -40px 130px 5px $BLUE, 0 -50px 150px 5px $BLUE, 0 -100px 180px 5px $BLUE;
+				}
+			}
+		}
+		table {
+			min-width: 100%;
+			tbody {
+				width: 100%;
+			}
+		}
+		&_skill {
+			display: flex;
+			flex-direction: column;
+		}
+		&_hard {
+			min-width: 100%;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+		}
+	}
+}
