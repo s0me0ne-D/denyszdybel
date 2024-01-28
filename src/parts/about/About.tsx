@@ -64,7 +64,7 @@ export const About = () => {
 			</div>
 
 			<div className="about_block">
-				<span ref={titleRef} className="about_title">
+				<span ref={titleRef} className="about_title ">
 					About Me
 				</span>
 				<span className="about_text">

@@ -1,0 +1,9 @@
+.block-title {
+	width: 100%;
+	display: flex;
+	justify-content: flex-end;
+	padding: 100px 0 20px;
+	font-family: "Heebo";
+	font-size: max(25px, min(2vw, 3rem));
+	font-weight: 900;
+}

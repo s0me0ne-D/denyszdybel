@@ -8,7 +8,7 @@ export const Skills = () => {
 	const [skillsState, setSkillsState] = useState<state>("hard");
 	return (
 		<div className="skills">
-			<div className="skills_title">
+			<div className="skills_title block-title">
 				<span>Skills</span>
 			</div>
 			<div className="skills_names">

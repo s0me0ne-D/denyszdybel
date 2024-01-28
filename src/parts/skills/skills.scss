@@ -6,13 +6,6 @@
 	gap: 20px;
 	color: #ffffff;
 	&_title {
-		width: 100%;
-		display: flex;
-		justify-content: flex-end;
-		padding: 100px 0 20px;
-		font-family: "Heebo";
-		font-size: max(25px, min(2vw, 3rem));
-		font-weight: 900;
 		span {
 			text-align: end;
 			width: 50%;
@@ -71,17 +64,6 @@
 		gap: 10px;
 		grid-template-columns: repeat(2, 1fr);
 		place-items: center;
-		li {
-			width: fit-content;
-			height: fit-content;
-			padding: 5px 15px;
-			background-color: rgba(135, 135, 135, 0.287);
-			border-radius: 10px;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			gap: 3px;
-		}
 		svg {
 			max-width: 20px;
 			max-height: 20px;
@@ -106,10 +88,21 @@
 		&_title {
 			font-family: "IBM 600";
 			display: flex;
-			justify-content: start;
+			justify-content: flex-start;
 			text-wrap: nowrap;
 		}
 	}
+}
+.skill {
+	width: fit-content;
+	height: fit-content;
+	padding: 5px 15px;
+	background-color: rgba(135, 135, 135, 0.287);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 3px;
 }
 
 $skillsQuantity: 12;
