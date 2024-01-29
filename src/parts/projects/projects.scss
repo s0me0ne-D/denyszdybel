@@ -50,3 +50,16 @@
 		}
 	}
 }
+@media (max-width: 850px) {
+	.posters {
+		display: none;
+	}
+	.projects_block {
+		grid-template-columns: 1fr;
+	}
+}
+@media (max-width: 510px) {
+	.projects {
+		padding: 0 30px;
+	}
+}

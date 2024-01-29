@@ -60,6 +60,7 @@ export const Projects = () => {
 	const blockRef = useRef(null);
 	const fisePosterRef = useRef(null);
 	const feasticoRef = useRef(null);
+	const posters = [FisePoster, FeasticoPoster, ToDoListPoster];
 	useLayoutEffect(() => {
 		gsap.fromTo(
 			fisePosterRef.current,
@@ -96,8 +97,8 @@ export const Projects = () => {
 			</div>
 			<div ref={blockRef} className="projects_block">
 				<div className="projects_block_info">
-					{projectsData.map((project) => (
-						<Project key={project.title} project={project} />
+					{projectsData.map((project, index) => (
+						<Project key={project.title} project={project} poster={posters[index]} />
 					))}
 				</div>
 				<div className="posters">

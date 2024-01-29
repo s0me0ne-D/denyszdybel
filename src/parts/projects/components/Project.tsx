@@ -1,10 +1,16 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { ProjectData } from "../Projects";
 import { DesignIcon } from "../../../assets/icons/DesignIcon";
 import "./project.scss";
 import { GitHubIcon } from "../../../assets/icons/GitHubIcon";
 import { WebLinkIcon } from "../../../assets/icons/WebLinkIcon";
-export const Project = ({ project }: { project: ProjectData }) => {
+import { useWindowWidth } from "../../../hooks/useWindowWidth";
+export const Project = ({ project, poster }: { project: ProjectData; poster: string }) => {
+	const [showPoster, setShowPoster] = useState<boolean>(false);
+	const windowWidth = useWindowWidth();
+	useEffect(() => {
+		setShowPoster(windowWidth < 850 ? true : false);
+	}, [windowWidth]);
 	return (
 		<div className="project">
 			<div className="project_logo">{project.logo}</div>
@@ -12,6 +18,7 @@ export const Project = ({ project }: { project: ProjectData }) => {
 				<div className="project_description_design">
 					<DesignIcon /> {project.design}
 				</div>
+				{showPoster && <img src={poster} alt="project poster" className="max-width-poster" />}
 				<div className="project_description_about">{project.description}</div>
 				<ul className="project_description_tech-stack">
 					{project.techStack.map((el) => (

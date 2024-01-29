@@ -19,7 +19,7 @@ export const HardSkills = () => {
 	return (
 		<ul className="skills_hard">
 			{hardSkills.map((skill, index) => (
-				<li key={index} className={`skills skill appears-scale-skills-${index + 1}`}>
+				<li key={index} className={` skill appears-scale-skills-${index + 1}`}>
 					{AllIcons[index]}
 					{skill}
 				</li>
