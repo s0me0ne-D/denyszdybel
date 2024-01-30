@@ -103,6 +103,15 @@ export const Projects = () => {
 				</div>
 				<div className="posters">
 					<div className="posters_container">
+						{/* <img ref={fisePosterRef} src={FisePoster} alt="Fise poster" style={{ zIndex: 3 }} />
+						<img
+							ref={feasticoRef}
+							src={FeasticoPoster}
+							alt="Feastico poster"
+							style={{ zIndex: 2 }}
+						/>
+						<img src={ToDoListPoster} alt="ToDoList poster" style={{ zIndex: 1 }} /> */}
+
 						<div ref={fisePosterRef} className="posters_container_item" style={{ zIndex: 3 }}>
 							<img src={FisePoster} alt="Fise poster" />
 						</div>

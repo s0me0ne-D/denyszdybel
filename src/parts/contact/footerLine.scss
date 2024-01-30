@@ -1,0 +1,56 @@
+@import "../../global_styles/colors", "../../global_styles/animations";
+
+.footer-line {
+	display: grid;
+	grid-template-columns: 1fr 2.5fr 2.5fr 1fr;
+	&_copy {
+		display: flex;
+		align-items: flex-end;
+		font-family: "IBM 200";
+		font-size: 10px;
+		color: #ffffff;
+		grid-column: 2;
+	}
+	&_media {
+		grid-column: 3;
+
+		min-height: 50px;
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		gap: 20px;
+		a {
+			cursor: pointer;
+			svg {
+				width: 30px;
+				height: 30px;
+				path {
+					transition: 0.2s ease-in;
+				}
+			}
+			&:hover {
+				svg {
+					animation: rotate 0.4s linear, 0.3s jump 0.4s infinite;
+				}
+				path {
+					fill: $BLUE;
+				}
+			}
+		}
+	}
+}
+@media (max-width: 510px) {
+	.footer-line {
+		display: flex;
+		flex-direction: column;
+		gap: 10px;
+		&_copy {
+			width: 100%;
+			display: flex;
+			justify-content: center;
+		}
+		&_media {
+			margin-right: 20px;
+		}
+	}
+}

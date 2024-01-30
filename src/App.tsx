@@ -4,6 +4,8 @@ import { Title } from "./parts/title/Title";
 import { About } from "./parts/about/About";
 import { Skills } from "./parts/skills/Skills";
 import { Projects } from "./parts/projects/Projects";
+import { Contact } from "./parts/contact/Contact";
+import { FooterLine } from "./parts/contact/FooterLine";
 
 function App() {
 	return (
@@ -12,7 +14,8 @@ function App() {
 			<About />
 			<Skills />
 			<Projects />
-			<Title />
+			<Contact />
+			<FooterLine />
 		</div>
 	);
 }

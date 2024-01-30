@@ -25,3 +25,20 @@
 		opacity: 1;
 	}
 }
+@keyframes rotate {
+	0% {
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes jump {
+	0% {
+	}
+	50% {
+		margin-bottom: 2px;
+	}
+	100% {
+		margin-bottom: 0;
+	}
+}

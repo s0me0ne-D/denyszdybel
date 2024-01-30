@@ -1,0 +1,42 @@
+.contact {
+	width: 100%;
+	min-height: 25vh;
+	background-color: white;
+	font-family: "Heebo";
+	font-weight: 200;
+	font-size: max(25px, min(2vw, 2rem));
+	display: grid;
+	grid-template-columns: 1fr 4fr max-content 1fr;
+	place-items: center;
+
+	&_text {
+		grid-column: 2;
+		padding: 0 20px;
+		span {
+			text-align: end;
+			font-weight: 400;
+		}
+	}
+
+	a {
+		padding: 30px 20px;
+		border-radius: 30px;
+		color: white;
+		background-color: #0e100f;
+	}
+}
+@media (max-width: 510px) {
+	.contact {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		text-align: center;
+	}
+}
+@media (max-width: 400px) {
+	.contact {
+		min-height: 50vh;
+		justify-content: center;
+		gap: 30px;
+	}
+}
