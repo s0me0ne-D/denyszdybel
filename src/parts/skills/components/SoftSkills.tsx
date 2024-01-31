@@ -1,4 +1,8 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
+
 type SoftSkillsType = { title: string; description?: string }[];
 const softSkills: SoftSkillsType = [
 	{
@@ -36,8 +40,27 @@ const softSkills: SoftSkillsType = [
 ];
 
 export const SoftSkills = () => {
+	const skillsRef = useRef(null);
+	useEffect(() => {
+		gsap.fromTo(
+			skillsRef.current,
+			{
+				opacity: 0,
+			},
+			{
+				opacity: 1,
+				scrollTrigger: {
+					trigger: skillsRef.current,
+					start: "top 90%",
+					end: "top 85%",
+					scrub: 1,
+				},
+			}
+		);
+	}, []);
+
 	return (
-		<table className="skills_soft">
+		<table className="skills_soft" ref={skillsRef}>
 			{softSkills.map((skill, index) => (
 				<tbody key={index} className={`appears-scale-skills-${index + 1}`}>
 					<tr key={index} className="skills_skill">

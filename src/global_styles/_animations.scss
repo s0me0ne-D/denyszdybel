@@ -42,3 +42,13 @@
 		margin-bottom: 0;
 	}
 }
+@keyframes scale {
+	0% {
+	}
+	50% {
+		transform: scale(1.02);
+	}
+	100% {
+		transform: scale(1);
+	}
+}

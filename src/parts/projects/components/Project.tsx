@@ -10,6 +10,7 @@ export const Project = ({ project, poster }: { project: ProjectData; poster: str
 	const windowWidth = useWindowWidth();
 	useEffect(() => {
 		setShowPoster(windowWidth < 850 ? true : false);
+		console.log(windowWidth);
 	}, [windowWidth]);
 	return (
 		<div className="project">

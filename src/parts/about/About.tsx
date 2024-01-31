@@ -20,7 +20,7 @@ export const About = () => {
 					trigger: titleRef.current,
 					scrub: 1,
 					start: "top 95%",
-					end: "bottom 95%",
+					end: "top 90%",
 				},
 			}
 		);
@@ -37,8 +37,8 @@ export const About = () => {
 				scrollTrigger: {
 					trigger: p1Ref.current,
 					scrub: 1,
-					start: "top 95%",
-					end: "bottom 85%",
+					start: "bottom 95%",
+					end: "bottom 90%",
 				},
 			}
 		);
@@ -51,8 +51,8 @@ export const About = () => {
 				scrollTrigger: {
 					trigger: p2Ref.current,
 					scrub: 1,
-					start: "top 92%",
-					end: "bottom 82%",
+					start: "bottom 95%",
+					end: "bottom 90%",
 				},
 			}
 		);
