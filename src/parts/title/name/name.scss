@@ -7,10 +7,9 @@
 .letters {
 	cursor: default;
 	position: relative;
-
 	&_transform {
 		opacity: 1;
-		position: relative;
+		height: 100%;
 		display: inline-block;
 		transition: 0.1s ease-in;
 		&.reverse {
@@ -19,16 +18,20 @@
 	}
 	&_background {
 		opacity: 1;
-		height: 100%;
+		min-height: 100%;
 		display: grid;
 		place-content: center;
 		position: absolute;
+		z-index: -1;
 		top: 0;
 		left: 0;
 		color: $BLUE;
 		transition: 0.1s ease-in;
 		&.reverse {
 			text-shadow: 0 0 10px #65aaea, 0 0 40px $BLUE, 0 0 80px $BLUE, 0 0 90px $BLUE;
+			&.safari-shadow {
+				text-shadow: none;
+			}
 		}
 	}
 	&:hover {
@@ -41,6 +44,9 @@
 			}
 			&_background {
 				text-shadow: 0 0 10px #65aaea, 0 0 40px $BLUE, 0 0 80px $BLUE, 0 0 90px $BLUE;
+				&.safari-shadow {
+					text-shadow: none;
+				}
 				&.reverse {
 					text-shadow: none;
 				}

@@ -7,7 +7,7 @@
 	color: #ffffff;
 	font-family: "IBM 200";
 	border-bottom: 1px solid #ffffff;
-	font-size: 12px;
+	font-size: max(15px, min(1vw, 1rem));
 	&:nth-child(3) {
 		border-bottom: none;
 	}
@@ -43,7 +43,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			gap: 10px;
-			font-size: 10px;
+			font-size: max(13px, min(0.7vw, 1rem));
 		}
 		&_links {
 			display: flex;

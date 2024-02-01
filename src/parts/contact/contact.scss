@@ -10,7 +10,7 @@
 	display: grid;
 	grid-template-columns: 1fr 4fr max-content 1fr;
 	place-items: center;
-
+	overflow: hidden;
 	&_text {
 		grid-column: 2;
 		padding: 0 20px;
