@@ -15,3 +15,7 @@
 	font-family: "IBM 600";
 	src: url("./assets/fonts/IBM_Plex_Sans/IBMPlexSans-Medium.ttf") format("truetype");
 }
+@font-face {
+	font-family: "Fuggles";
+	src: url("./assets/fonts/Fuggles/Fuggles-Regular.ttf") format("truetype");
+}
