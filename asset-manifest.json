@@ -1,20 +1,21 @@
 {
   "files": {
-    "main.css": "/static/css/main.e7a33a2e.css",
+    "main.css": "/static/css/main.4a9e0416.css",
     "main.js": "/static/js/main.5c9cb3c4.js",
     "static/media/FisePoster.png": "/static/media/FisePoster.82aab16223cf6f70c930.png",
     "static/media/FeasticoPoster.png": "/static/media/FeasticoPoster.760e3c745d5e6c7e1562.png",
     "static/media/Inter-VariableFont.ttf": "/static/media/Inter-VariableFont.853e01975d2783d9fa29.ttf",
+    "static/media/Fuggles-Regular.ttf": "/static/media/Fuggles-Regular.2ec55ab50521db39859d.ttf",
     "static/media/ToDoListPoster.png": "/static/media/ToDoListPoster.f0a19ac78fb35f4e28b8.png",
     "static/media/IBMPlexSans-ExtraLight.ttf": "/static/media/IBMPlexSans-ExtraLight.80e51e08c66239d80b58.ttf",
     "static/media/IBMPlexSans-Medium.ttf": "/static/media/IBMPlexSans-Medium.56fb541cbbc5462f1c33.ttf",
     "static/media/Heebo-VariableFont_wght.ttf": "/static/media/Heebo-VariableFont_wght.546f69c3420c6a1216da.ttf",
     "index.html": "/index.html",
-    "main.e7a33a2e.css.map": "/static/css/main.e7a33a2e.css.map",
+    "main.4a9e0416.css.map": "/static/css/main.4a9e0416.css.map",
     "main.5c9cb3c4.js.map": "/static/js/main.5c9cb3c4.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7a33a2e.css",
+    "static/css/main.4a9e0416.css",
     "static/js/main.5c9cb3c4.js"
   ]
 }
