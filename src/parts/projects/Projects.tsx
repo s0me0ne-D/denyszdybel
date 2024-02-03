@@ -60,8 +60,23 @@ export const Projects = () => {
 	const blockRef = useRef(null);
 	const fisePosterRef = useRef(null);
 	const feasticoRef = useRef(null);
+	const titleRef = useRef(null);
 	const posters = [FisePoster, FeasticoPoster, ToDoListPoster];
 	useLayoutEffect(() => {
+		gsap.fromTo(
+			titleRef.current,
+			{ opacity: 0, y: "-10px" },
+			{
+				opacity: 1,
+				y: "0px",
+				scrollTrigger: {
+					trigger: titleRef.current,
+					scrub: 1,
+					start: "top 95%",
+					end: "bottom 95%",
+				},
+			}
+		);
 		gsap.fromTo(
 			fisePosterRef.current,
 			{ clipPath: "inset(0px 0px 0px 0px)" },
@@ -93,7 +108,7 @@ export const Projects = () => {
 	return (
 		<div className="projects">
 			<div className="projects_title block-title grid-columns">
-				<span>Projects</span>
+				<span ref={titleRef}>Projects</span>
 			</div>
 			<div ref={blockRef} className="projects_block">
 				<div className="projects_block_info">
@@ -103,15 +118,6 @@ export const Projects = () => {
 				</div>
 				<div className="posters">
 					<div className="posters_container">
-						{/* <img ref={fisePosterRef} src={FisePoster} alt="Fise poster" style={{ zIndex: 3 }} />
-						<img
-							ref={feasticoRef}
-							src={FeasticoPoster}
-							alt="Feastico poster"
-							style={{ zIndex: 2 }}
-						/>
-						<img src={ToDoListPoster} alt="ToDoList poster" style={{ zIndex: 1 }} /> */}
-
 						<div ref={fisePosterRef} className="posters_container_item" style={{ zIndex: 3 }}>
 							<img src={FisePoster} alt="Fise poster" />
 						</div>

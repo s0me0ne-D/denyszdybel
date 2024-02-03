@@ -11,31 +11,36 @@ const softSkills: SoftSkillsType = [
 	},
 	{
 		title: "Problem Solving:",
-		description: "the ability to identify issues, analyze them, and find effective solutions.",
-	},
-	{
-		title: "Attention to Detail",
-	},
-	{
-		title: "Time Management",
+		description: "the ability to identify problems, analyze them, and find effective solutions.",
 	},
 	{
 		title: "Adaptability:",
 		description: "quickly learn and integrate new tools, libraries, and frameworks.",
 	},
 	{
-		title: "Collaboration:",
-		description: "the ability to collaborate, share ideas, and accept feedback.",
-	},
-	{
-		title: "Creativity",
-	},
-	{
-		title: "Continuous Learning",
+		title: "Continuous Learning:",
+		description: "actively engaged in continuous skill development.",
 	},
 	{
 		title: "Critical Thinking:",
 		description: "making informed decisions and improvements.",
+	},
+
+	{
+		title: "Attention to Detail:",
+		description: "meticulous, ensuring high-quality work by paying attention to details.",
+	},
+	{
+		title: "Time Management:",
+		description: "efficiently plan and prioritize tasks for timely results.",
+	},
+	{
+		title: "Collaboration:",
+		description: "the ability to collaborate, share ideas, and accept feedback.",
+	},
+	{
+		title: "Creativity:",
+		description: "apply creative thinking to generate original solutions.",
 	},
 ];
 

@@ -11,7 +11,7 @@ export const Title = () => {
 				<span className="appears-down-1">Hi, I am</span> <br />
 				<Name />
 			</span>
-			<span className="title_description appears-down-1">Font-End Developer</span>
+			<span className="title_description appears-down-1">Front-End Developer</span>
 		</div>
 	);
 };

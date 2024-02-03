@@ -69,12 +69,16 @@ export const About = () => {
 				</span>
 				<span className="about_text">
 					<span ref={p1Ref}>
-						Passionate and detail-oriented React Frontend Developer. Dedicated to contributing
-						creative solutions to projects and committed to continuous skill enhancement.
+						Hello! I'm Denys, a passionate React Front-End Developer based in Wrocław,
+						Poland.Dedicated to contributing creative solutions to projects and committed to
+						continuous skill enhancement. With a keen eye for design and a love for creating
+						seamless user experiences, I bring websites to life with clean code and a touch of
+						creativity.
 					</span>
 					<span ref={p2Ref}>
-						My goal is to combine creative thinking and desin with an analitical approach to solve
-						problems at the intersection of business and technology.
+						Explore my portfolio and discover the projects that showcase my dedication to crafting
+						visually appealing and functional web solutions. Let's turn ideas into interactive
+						realities!
 					</span>
 				</span>
 			</div>
