@@ -6,10 +6,10 @@ gsap.registerPlugin(ScrollTrigger);
 const hardSkills = [
 	"HTML",
 	"CSS",
-	"Java Script",
+	"JavaScript",
 	"React",
 	"Sass/scss",
-	"Typescript",
+	"TypeScript",
 	"Redux / Redux toolkit / RTK Query",
 	"RESTful API",
 	"Git",

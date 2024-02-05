@@ -8,8 +8,8 @@ My personal website running on React.
 
 - React
 - SCSS
-- Type Script
-- Java Script
+- TypeScript
+- JavaScript
 
 ## Libraries used 📚
 
