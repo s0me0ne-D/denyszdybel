@@ -50,8 +50,8 @@ const projectsData: ProjectsData = [
 		techStack: ["React", "TypeScript", "Redux Toolkit", "JavaScript", "SCSS", "Git"],
 		logo: <ToDoListLogo />,
 		links: {
-			git: "https://github.com/s0me0ne-D/to_do_list_redux-toolkit",
-			url: "https://s0me0ne-d.github.io/to_do_list_redux-toolkit/",
+			git: "https://github.com/s0me0ne-D/to_do_list",
+			url: "https://s0me0ne-d.github.io/to_do_list/",
 		},
 	},
 ];
