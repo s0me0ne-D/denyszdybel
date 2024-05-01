@@ -7,7 +7,9 @@ import { Project } from "./components/Project";
 import FisePoster from "../../assets/posters/FisePoster.png";
 import FeasticoPoster from "../../assets/posters/FeasticoPoster.png";
 import ToDoListPoster from "../../assets/posters/ToDoListPoster.png";
+import WeatherAppPoster from "../../assets/posters/WeatherAppPoster.png";
 import gsap from "gsap";
+import { WeatherAppLogo } from "../../assets/logos/weatherAppLogo/WeatherAppLogo";
 
 export type ProjectData = {
 	title: string;
@@ -54,14 +56,36 @@ const projectsData: ProjectsData = [
 			url: "https://s0me0ne-d.github.io/to_do_list/",
 		},
 	},
+	{
+		title: "WeatherApp",
+		design: "Responsive",
+		techStack: [
+			"React",
+			"TypeScript",
+			"SCSS",
+			"Redux Toolkit",
+			"RTK Query",
+			"Swiper",
+			"Leaflet",
+			"MUI",
+			"Lottie",
+		],
+		logo: <WeatherAppLogo />,
+		links: {
+			git: "https://github.com/s0me0ne-D/weather_app",
+			url: "https://s0me0ne-d.github.io/weather_app/",
+		},
+	},
 ];
 
 export const Projects = () => {
 	const blockRef = useRef(null);
 	const fisePosterRef = useRef(null);
 	const feasticoRef = useRef(null);
+	const toDoListRef = useRef(null);
 	const titleRef = useRef(null);
-	const posters = [FisePoster, FeasticoPoster, ToDoListPoster];
+
+	const posters = [FisePoster, FeasticoPoster, ToDoListPoster, WeatherAppPoster];
 	useLayoutEffect(() => {
 		gsap.fromTo(
 			titleRef.current,
@@ -86,7 +110,7 @@ export const Projects = () => {
 					trigger: blockRef.current,
 					scrub: 1,
 					start: "top 25%",
-					end: "67% 75%",
+					end: "50% 75%",
 				},
 			}
 		);
@@ -98,7 +122,20 @@ export const Projects = () => {
 				scrollTrigger: {
 					trigger: blockRef.current,
 					scrub: 1,
-					start: "34% 25%",
+					start: "25% 25%",
+					end: "75% 75%",
+				},
+			}
+		);
+		gsap.fromTo(
+			toDoListRef.current,
+			{ clipPath: "inset(0px 0px 0px 0px)" },
+			{
+				clipPath: "inset(0px 0px 100% 0px)",
+				scrollTrigger: {
+					trigger: blockRef.current,
+					scrub: 1,
+					start: "50% 25%",
 					end: "100% 75%",
 				},
 			}
@@ -118,14 +155,17 @@ export const Projects = () => {
 				</div>
 				<div className="posters">
 					<div className="posters_container">
-						<div ref={fisePosterRef} className="posters_container_item" style={{ zIndex: 3 }}>
+						<div ref={fisePosterRef} className="posters_container_item" style={{ zIndex: 4 }}>
 							<img src={FisePoster} alt="Fise poster" />
 						</div>
-						<div ref={feasticoRef} className="posters_container_item" style={{ zIndex: 2 }}>
+						<div ref={feasticoRef} className="posters_container_item" style={{ zIndex: 3 }}>
 							<img src={FeasticoPoster} alt="Feastico poster" />
 						</div>
-						<div className="posters_container_item" style={{ zIndex: 1 }}>
+						<div ref={toDoListRef} className="posters_container_item" style={{ zIndex: 2 }}>
 							<img src={ToDoListPoster} alt="ToDoList poster" />
+						</div>
+						<div className="posters_container_item" style={{ zIndex: 1 }}>
+							<img src={WeatherAppPoster} alt="WeatherApp poster" />
 						</div>
 						<div className="shadow"></div>
 					</div>

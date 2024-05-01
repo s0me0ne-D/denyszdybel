@@ -1,6 +1,6 @@
 import React from "react";
-import "./toDoListLogo.scss";
+import "../projectLogo.scss";
 
 export const ToDoListLogo = () => {
-	return <div className="toDoList-logo">ToDoList</div>;
+	return <div className="project-logo">ToDoList</div>;
 };
